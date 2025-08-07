@@ -1,0 +1,66 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider / VS Code settings
+.idea/
+.vscode/
+.vscode/*
+
+# Logs
+*.log
+logs/
+*.tlog
+
+# ASP.NET Secrets
+**/appsettings.*.json
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Dotnet watch working files
+**/Properties/launchSettings.json
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Others
+*.db
+*.sqlite
+*.bak
+*.swp
+*.tmp
+
+# npm / yarn packages (if frontend used)
+node_modules/
+dist/
+
+# EF Core Migrations snapshot
+*MigrationsSnapshot.cs
+
+# Publish output
+publish/
+
+# Global tools
+.tools/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# VS for Mac
+.vscode-test/
+
+not.txt
