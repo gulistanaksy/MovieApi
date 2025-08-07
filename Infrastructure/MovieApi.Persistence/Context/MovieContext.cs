@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using MovieApi.Domain.Entities;
 
 namespace MovieApi.Persistence.Context
 {
@@ -9,7 +10,7 @@ namespace MovieApi.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-HCI1PTP; initial Catalog=ApiMovieDb; integrated Security=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-HCI1PTP; initial Catalog=ApiMovieDb; integrated Security=true; TrustServerCertificate=true");
         }
        public DbSet<Category> Categories { get; set; }
        public DbSet<Movie> Movies { get; set; }

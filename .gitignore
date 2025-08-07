@@ -50,6 +50,9 @@ dist/
 # EF Core Migrations snapshot
 *MigrationsSnapshot.cs
 
+# EF Core Migrations (tamamı, migration klasörlerini dahil etme)
+**/Migrations/
+
 # Publish output
 publish/
 
@@ -62,5 +65,9 @@ _ReSharper*/
 
 # VS for Mac
 .vscode-test/
+
+# Environment variable files
+.env
+.env.*
 
 not.txt
