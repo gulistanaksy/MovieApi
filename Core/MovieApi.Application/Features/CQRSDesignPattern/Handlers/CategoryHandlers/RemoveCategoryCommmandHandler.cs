@@ -19,8 +19,8 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandl
         }
         public async void Handle(RemoveCategoryCommand command)
         {
-            var value = await _contex.Movies.FindAsync(command.CategoryId);
-            _contex.Movies.Remove(value);
+            var value = await _contex.Categories.FindAsync(command.CategoryId);
+            _contex.Categories.Remove(value);
             await _contex.SaveChangesAsync();
         }
 
