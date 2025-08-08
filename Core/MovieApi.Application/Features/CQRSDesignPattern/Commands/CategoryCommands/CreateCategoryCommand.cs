@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MovieApi.Application.Features.CQRSDesignPattern.Commands.CategoryCommands
 {
-    public class CreateCategoryComman
+    public class CreateCategoryCommand
     {
         public string CategoryName { get; set; }
 
