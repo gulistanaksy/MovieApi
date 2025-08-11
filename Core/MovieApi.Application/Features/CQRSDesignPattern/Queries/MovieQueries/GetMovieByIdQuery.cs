@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MovieApi.Application.Features.CQRSDesignPattern.Query.MovieQueries
+namespace MovieApi.Application.Features.CQRSDesignPattern.Queries.MovieQueries
 {
     public class GetMovieByIdQuery
     {
