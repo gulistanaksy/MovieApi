@@ -7,6 +7,8 @@ using MovieApi.Application.Features.CQRSDesignPattern.Queries.MovieQueries;
 
 namespace MovieApi.WebApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class MoviesController : ControllerBase
     {
         private readonly GetMovieQueryHandler _getMovieQueryHandler;

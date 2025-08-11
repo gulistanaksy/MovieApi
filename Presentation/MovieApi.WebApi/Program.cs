@@ -1,5 +1,6 @@
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
+using MovieApi.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,10 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<MovieContext>();
+
 builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
 builder.Services.AddScoped<CreateCategoryCommandHandler>();
 builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+builder.Services.AddScoped<RemoveCategoryCommmandHandler>();
 
 builder.Services.AddScoped<GetMovieQueryHandler>();
 builder.Services.AddScoped<GetMovieByIdQueryHandler>();
@@ -32,8 +36,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthorization();
 
-
+app.MapControllers();
 
 app.Run();
 
