@@ -7,5 +7,9 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Commands.MovieCommands
     {
         public int MovieId { get; set; }
 
+        public RemoveMovieCommand(int movieId)
+        {
+            MovieId = movieId;
+        }
     }
 }
