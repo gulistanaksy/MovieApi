@@ -71,3 +71,7 @@ _ReSharper*/
 .env.*
 
 not.txt
+
+node_modules
+node_modules/
+node_modules/*
