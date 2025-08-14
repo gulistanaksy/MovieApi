@@ -26,7 +26,7 @@ namespace MovieApi.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createUserRegisterDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var response = await client.PostAsync("https://localhost:7053/api/Registers", stringContent);
+            var response = await client.PostAsync("http://localhost:5195/api/Registers", stringContent);
 
             if (response.IsSuccessStatusCode)
             {
