@@ -1,12 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using MovieApi.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using MovieApi.Persistence.Identity;
 
 namespace MovieApi.Persistence.Context
 {
-    public class MovieContext : DbContext
+    public class MovieContext : IdentityDbContext<AppUser>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
